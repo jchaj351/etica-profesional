@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Hábitos Atómicos — Ética y Crecimiento | UMG</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Recurso didáctico sobre 'Hábitos Atómicos' de James Clear — análisis ético, recursos, cuestionarios y ejemplos para el curso de Ética (UMG).">
+  <style>
+    :root{
+      --umg-red:#B71C1C; --bg:#F5F5F5; --card:#FFFFFF; --text:#212121; --muted:#6B6B6B;
+      --radius:14px; --glass: rgba(255,255,255,0.6);
+    }
+    *{box-sizing:border-box}
+    body{font-family:'Poppins',system-ui,Segoe UI,Roboto,Arial;background:linear-gradient(180deg,var(--bg),#ffffff 60%);color:var(--text);margin:0;line-height:1.5}
+    /* Header */
+    header{position:fixed;left:0;right:0;top:0;height:72px;display:flex;align-items:center;gap:1rem;padding:0 22px;background:rgba(255,255,255,0.8);backdrop-filter:blur(6px);box-shadow:0 6px 18px rgba(11,11,11,0.06);z-index:40}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo img{height:48px;border-radius:8px}
+    .brand{font-weight:700;color:var(--umg-red);letter-spacing:0.2px}
+    nav{margin-left:auto;display:flex;gap:14px}
+    nav a{padding:8px 12px;border-radius:10px;text-decoration:none;color:var(--text);font-weight:600;opacity:0.9;transition:all .25s}
+    nav a:hover{transform:translateY(-3px);box-shadow:0 6px 18px rgba(11,11,11,0.08)}
+
+    /* Hero */
+    .hero{padding:120px 22px 48px;display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
+    .card{background:var(--card);border-radius:var(--radius);padding:22px;box-shadow:0 10px 30px rgba(11,11,11,0.06);}
+    h1{font-size:28px;margin:0 0 6px}
+    p.lead{margin:0;color:var(--muted)}
+    .cta{margin-top:14px;display:flex;gap:10px}
+    .btn{background:var(--umg-red);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;transition:transform .22s}
+    .btn.secondary{background:transparent;color:var(--umg-red);border:2px solid var(--umg-red)}
+    .btn:hover{transform:translateY(-4px)}
+
+    /* Sections */
+    .container{max-width:1100px;margin:28px auto;padding:0 18px}
+    section{margin:28px 0}
+    .grid-2{display:grid;grid-template-columns:1fr 420px;gap:22px}
+    .fade-up{opacity:0;transform:translateY(10px);animation:fadeUp .7s forwards}
+    @keyframes fadeUp{to{opacity:1;transform:none}}
+
+    /* Foundations list */
+    .foundations ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+    .foundations li{background:linear-gradient(180deg,rgba(183,28,28,0.04),transparent);padding:12px;border-radius:10px}
+
+    /* Media card */
+    .media{display:grid;gap:12px}
+    .media iframe, .media audio{width:100%;border-radius:10px}
+
+    /* Dilemmas */
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .dilemma{padding:16px;border-radius:12px;background:var(--card);box-shadow:0 8px 18px rgba(11,11,11,0.04);transition:transform .22s}
+    .dilemma:hover{transform:translateY(-6px)}
+
+    /* Quiz */
+    .quiz qgroup{display:block}
+    .question{margin-bottom:10px;padding:12px;border-radius:10px;background:var(--card)}
+    .options{display:grid;gap:8px}
+    .option{display:flex;gap:10px;align-items:center;padding:10px;border-radius:10px;border:1px solid rgba(33,33,33,0.06);cursor:pointer}
+    .option input{accent-color:var(--umg-red)}
+    .results{margin-top:12px;padding:12px;border-radius:10px}
+
+    /* Footer */
+    footer{padding:20px;background:transparent;text-align:center;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:980px){.hero,.grid-2{grid-template-columns:1fr}.logo img{height:44px}.hero{padding-top:110px}}
+
+    /* small niceties */
+    .muted{color:var(--muted)}
+    .tag{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(183,28,28,0.08);color:var(--umg-red);font-weight:700}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <!-- Reemplaza 'logo-umg.png' por la ruta del logo de la Universidad Mariano Gálvez -->
+      <img src="logoumg.jpg" alt="Logo UMG" id="logo.png"/>
+      <div>
+        <div class="brand">UMG • Ética</div>
+        <div class="muted" style="font-size:13px">Hábitos Atómicos — James Clear</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#fundamentos">Fundamentos</a>
+      <a href="#analisis">Análisis</a>
+      <a href="#dilemas">Dilemas</a>
+      <a href="#auto">Autoevaluación</a>
+      <a href="#Datos">Datos personales</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero container">
+      <div class="card fade-up">
+        <h1>Hábitos Atómicos: Ética y Crecimiento Personal</h1>
+        <p class="lead">Recurso didáctico para el curso de Ética basado en el libro <strong>Hábitos Atómicos</strong> de James Clear. Aquí encontrarás análisis, audios, videos, autoevaluación y ejemplos prácticos aplicados al ámbito profesional.</p>
+        <div class="cta">
+          <a href="#analisis" class="btn">Ver análisis</a>
+          <a href="#auto" class="btn secondary">Realizar autoevaluación</a>
+        </div>
+      </div>
+
+      <aside class="card media fade-up">
+        <h3 style="margin-top:0">Video recomendado</h3>
+        <!-- Inserta el ID de YouTube o el enlace completo en el src -->
+<iframe width="560" height="315" 
+src="https://www.youtube.com/embed/DCJkHN4l7B0?rel=0" 
+title="Hábitos Atómicos" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+</iframe>
+
+      </aside>
+    </section>
+
+    <section id="fundamentos" class="container foundations">
+      <div class="card fade-up">
+        <h2>Fundamentos de creación web</h2>
+        <p class="muted">A continuación se describen los aspectos técnicos y de diseño que se tomaron en cuenta para la elaboración de esta página web.</p>
+        <ul>
+          <li><strong>Diseño responsive:</strong> Grid y flexbox para garantizar correcta visualización en móviles y escritorio.</li>
+          <li><strong>Estructura de navegación clara:</strong> Menú fijo superior para acceso rápido a todas las secciones.</li>
+          <li><strong>Paleta UMG:</strong> Uso del color institucional para coherencia visual y profesionalismo.</li>
+          <li><strong>Tipografía:</strong> Poppins (Google Fonts) por su legibilidad y estética moderna.</li>
+          <li><strong>Accesibilidad:</strong> Contrastes adecuados y controles keyboard-friendly en formularios.</li>
+          <li><strong>Recursos multimedia:</strong> Embeds de video, audio y cuestionarios interactivos para el aprendizaje activo.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="analisis" class="container">
+      <div class="grid-2">
+        <div class="card fade-up">
+          <h2>Análisis profundo — "Hábitos Atómicos"</h2>
+          <p><strong>Resumen:</strong> James Clear propone que el cambio duradero no depende de grandes transformaciones, sino de pequeñas mejoras diarias (hábitos atómicos). El foco está en crear sistemas, no metas, y en modificar el entorno para facilitar buenos hábitos. El libro es valioso desde la ética profesional porque promueve la responsabilidad personal, la mejora continua y la coherencia entre valores y acciones.</p>
+
+          <h3>Principios éticos clave extraídos</h3>
+          <ol>
+            <li><strong>Responsabilidad personal:</strong> Reconocer que las acciones cotidianas forman la carrera profesional y la reputación.</li>
+            <li><strong>Integridad y coherencia:</strong> Practicar hábitos que reflejen los valores declarados.</li>
+            <li><strong>Disciplina del entorno:</strong> Diseñar contextos que faciliten comportamientos éticos.</li>
+          </ol>
+
+          <h3>Justificación del valor ético y profesional</h3>
+          <p>El libro fomenta una ética de la acción sostenida: pequeñas decisiones cotidianas que, acumuladas, producen carácter y credibilidad profesional. Para ingenieros y profesionales, esto se traduce en responsabilidad técnica, cumplimiento de normas y mejora continua.</p>
+        </div>
+
+        <aside class="card media fade-up">
+       <!-- audio -->
+          <h1>Audio (resumen)</h1>
+<audio controls>
+  <source src="https://cdn.pixabay.com/audio/2023/04/14/audio_3c57a31e5c.mp3" type="audio/mpeg">
+  Tu navegador no soporta la reproducción de audio.
+</audio>
+<p>
+  En este resumen se explica cómo los pequeños cambios diarios pueden generar resultados extraordinarios. 
+  James Clear destaca que los hábitos son el sistema que nos lleva al éxito, no las metas en sí mismas. 
+  La ética detrás de este enfoque está en la responsabilidad personal y la constancia para mejorar cada día.
+</p>
+</aside>
+ 
+          <h3 style="margin-top:14px">Material complementario</h3>
+          <p class="muted" style="font-size:13px">Infografía, mapas mentales y enlaces externos para profundizar.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="dilemas" class="container">
+      <div class="card fade-up">
+        <h2>Aplicación práctica — Dilemas profesionales</h2>
+        <p class="muted">Tres ejemplos reales/hipotéticos y cómo aplicar los principios de Hábitos Atómicos para resolverlos éticamente.</p>
+        <div class="cards">
+          <div class="dilemma">
+            <h4>Dilema 1: Reportar errores en un proyecto</h4>
+            <p>Un miembro del equipo detecta un fallo en una medición que podría retrasar la entrega. ¿Reportarlo y asumir consecuencias o callar para no afectar plazos?</p>
+            <p><strong>Aplicación:</strong> La responsabilidad personal y la creación del hábito de transparencia (rutinas para revisiones y comunicación) favorecen reportarlo de forma oportuna y profesional.</p>
+          </div>
+
+          <div class="dilemma">
+            <h4>Dilema 2: Atajos técnicos para cumplir plazo</h4>
+            <p>Ante la presión, un ingeniero considera usar una solución rápida pero no óptima.</p>
+            <p><strong>Aplicación:</strong> Diseñar sistemas (checklists, code reviews) que fomenten la integridad técnica y reduzcan la tentación de atajos.</p>
+          </div>
+
+          <div class="dilemma">
+            <h4>Dilema 3: Conflicto de interés</h4>
+            <p>Un profesional puede beneficiarse económicamente si favorece a un proveedor.</p>
+            <p><strong>Aplicación:</strong> Implementar hábitos de transparencia y auditoría rutinaria; pequeñas acciones como registrar decisiones y justificaciones mantienen la conducta ética.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="auto" class="container">
+      <div class="card fade-up">
+        <h2>Autoevaluación interactiva</h2>
+        <p class="muted">Contesta honestamente las siguientes preguntas. A continuación verás un breve diagnóstico y recomendaciones para mejorar.</p>
+
+        <form id="quiz-form">
+          <!-- 10 preguntas -->
+          <div class="question" data-q="1">
+            <p><strong>1.</strong> ¿Con qué frecuencia revisas tus procedimientos de trabajo para evitar errores?</p>
+            <div class="options">
+              <label class="option"><input type="radio" name="q1" value="0">Nunca</label>
+              <label class="option"><input type="radio" name="q1" value="1">Rara vez</label>
+              <label class="option"><input type="radio" name="q1" value="2">A veces</label>
+              <label class="option"><input type="radio" name="q1" value="3">Siempre</label>
+            </div>
+          </div>
+
+          <div class="question" data-q="2">
+            <p><strong>2.</strong> ¿Tienes rutinas diarias para organizar tu trabajo profesional?</p>
+            <div class="options">
+              <label class="option"><input type="radio" name="q2" value="0">No</label>
+              <label class="option"><input type="radio" name="q2" value="1">Pocas</label>
+              <label class="option"><input type="radio" name="q2" value="2">Algunas</label>
+              <label class="option"><input type="radio" name="q2" value="3">Sí, muchas</label>
+            </div>
+          </div>
+
+          <div class="question" data-q="3">
+            <p><strong>3.</strong> ¿Documentas decisiones clave en tus proyectos (por ejemplo: por qué se eligió X solución)?</p>
+            <div class="options">
+              <label class="option"><input type="radio" name="q3" value="0">Nunca</label>
+              <label class="option"><input type="radio" name="q3" value="1">Rara vez</label>
+              <label class="option"><input type="radio" name="q3" value="2">A veces</label>
+              <label class="option"><input type="radio" name="q3" value="3">Siempre</label>
+            </div>
+          </div>
+
+          <div class="question" data-q="4">
+            <p><strong>4.</strong> ¿Sueles buscar retroalimentación de colegas para mejorar tu trabajo?</p>
+            <div class="options">
+              <label class="option"><input type="radio" name="q4" value="0">Nunca</label>
+              <label class="option"><input type="radio" name="q4" value="1">Pocas veces</label>
+              <label class="option"><input type="radio" name="q4" value="2">A veces</label>
+              <label class="option"><input type="radio" name="q4" value="3">Sí, regularmente</label>
+            </div>
+          </div>
+
+          <div class="question" data-q="5">
+            <p><strong>5.</strong> ¿Tomas descansos planificados para mantener la concentración y evitar errores?</p>
+            <div class="options">
+              <label class="option"><input type="radio" name="q5" value="0">No</label>
+              <label class="option"><input type="radio" name="q5" value="1">Rara vez</label>
+              <label class="option"><input type="radio" name="q5" value="2">A veces</label>
+              <label class="option"><input type="radio" name="q5" value="3">Sí</label>
+            </div>
+          </div>
+
+          <div class="question" data-q="6">
+            <p><strong>6.</strong> ¿Has creado mecanismos (checklists, revisiones) para evitar atajos riesgosos?</p>
+            <div class="options">
+              <label class="option"><input type="radio" name="q6" value="0">No</label>
+              <label class="option"><input type="radio" name="q6" value="1">Poco</label>
+              <label class="option"><input type="radio" name="q6" value="2">Algo</label>
+              <label class="option"><input type="radio" name="q6" value="3">Sí</label>
+            </div>
+          </div>
+
+          <div class="question" data-q="7">
+            <p><strong>7.</strong> ¿Evalúas el impacto ético de tus decisiones profesionales?</p>
+            <div class="options">
+              <label class="option"><input type="radio" name="q7" value="0">Nunca</label>
+              <label class="option"><input type="radio" name="q7" value="1">Rara vez</label>
+              <label class="option"><input type="radio" name="q7" value="2">A veces</label>
+              <label class="option"><input type="radio" name="q7" value="3">Siempre</label>
+            </div>
+          </div>
+
+          <div class="question" data-q="8">
+            <p><strong>8.</strong> ¿Promueves hábitos éticos en tu equipo (comunicación, transparencia)?</p>
+            <div class="options">
+              <label class="option"><input type="radio" name="q8" value="0">No</label>
+              <label class="option"><input type="radio" name="q8" value="1">Pocas veces</label>
+              <label class="option"><input type="radio" name="q8" value="2">A veces</label>
+              <label class="option"><input type="radio" name="q8" value="3">Sí</label>
+            </div>
+          </div>
+
+          <div class="question" data-q="9">
+            <p><strong>9.</strong> ¿Planificas metas pequeñas y medibles para mejorar profesionalmente?</p>
+            <div class="options">
+              <label class="option"><input type="radio" name="q9" value="0">No</label>
+              <label class="option"><input type="radio" name="q9" value="1">Rara vez</label>
+              <label class="option"><input type="radio" name="q9" value="2">A veces</label>
+              <label class="option"><input type="radio" name="q9" value="3">Sí</label>
+            </div>
+          </div>
+
+          <div class="question" data-q="10">
+            <p><strong>10.</strong> ¿Mantienes evidencias de tus progresos (logs, bitácoras, reportes)?</p>
+            <div class="options">
+              <label class="option"><input type="radio" name="q10" value="0">No</label>
+              <label class="option"><input type="radio" name="q10" value="1">Rara vez</label>
+              <label class="option"><input type="radio" name="q10" value="2">A veces</label>
+              <label class="option"><input type="radio" name="q10" value="3">Sí</label>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:8px;align-items:center;margin-top:12px">
+            <button type="button" class="btn" id="submit-quiz">Evaluar</button>
+            <button type="reset" class="btn secondary">Resetear</button>
+          </div>
+
+          <div id="quiz-result" class="results" aria-live="polite" style="display:none"></div>
+        </form>
+      </div>
+    </section>
+
+    <section id="Datos" class="container">
+      <div class="card fade-up">
+        <h2>Datos personales</h2>
+        <ul>
+          <li>Proyecto: Ética profesional</li>
+          <li>Universidad Mariano Gálvez</li>
+          <li>Facultad de Ingeniería</li>
+          <li>Curso: Ética profesional</li>
+          <li>Desarrollado por: José Manuel Chaj Vicente</li>
+          <li>Año: 2025</li>
+          <li>Basado en el libro: Hábitos Atómicos, James Clear</li>
+        </ul>
+
+        <h3 style="margin-top:12px">Créditos y referencias</h3>
+        <p class="muted">James Clear, <em>Atomic Habits</em>. Materiales complementarios: entrevistas, podcasts y artículos académicos sobre ética profesional y mejora continua.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="muted">Diseñado para el curso de Ética — Universidad Mariano Gálvez. &copy; <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <script>
+    // small JS for animations & quiz logic
+    document.addEventListener('DOMContentLoaded',()=>{
+      document.getElementById('year').textContent=new Date().getFullYear();
+      // reveal fade-up elements on load
+      document.querySelectorAll('.fade-up').forEach((el,i)=>{el.style.animationDelay=(i*80)+'ms'})
+
+      // quiz logic
+      const submit=document.getElementById('submit-quiz');
+      submit.addEventListener('click',()=>{
+        const form=document.getElementById('quiz-form');
+        let total=0; let answered=true;
+        for(let i=1;i<=10;i++){
+          const val=form['q'+i].value;
+          if(val===''){answered=false;break}
+          total+=Number(val);
+        }
+        const resultBox=document.getElementById('quiz-result');
+        if(!answered){resultBox.style.display='block';resultBox.style.background='#fff3f3';resultBox.textContent='Por favor responde todas las preguntas antes de evaluar.';return}
+        const max=30; // 10*3
+        const pct=Math.round((total/max)*100);
+        let message=''; let color='';
+        if(pct>=80){message='Excelente: Tus hábitos actuales muestran consistencia y responsabilidad profesional.';color='#e6f7ef'}
+        else if(pct>=50){message='Bueno: Buenas prácticas, pero hay áreas que mejorar con hábitos pequeños y sistemáticos.';color='#fff8e6'}
+        else{message='Necesita mejora: Empieza con micro-hábitos: metas pequeñas y revisiones rutinarias.';color='#fff0f0'}
+        resultBox.style.display='block';resultBox.style.background=color;resultBox.innerHTML=`<strong>Puntaje:</strong> ${total} / ${max} (${pct}%)<br><span style=\"display:block;margin-top:8px\">${message}</span>`;
+        // suggestions based on low scores
+        if(pct<50){resultBox.innerHTML+=`<div style=\"margin-top:8px\"><strong>Sugerencias:</strong><ul><li>Implementa checklists diarios.</li><li>Documenta decisiones importantes.</li><li>Programa revisiones semanales con colegas.</li></ul></div>`}
+      });
+
+      // clickable option labels (improve UX on mobile)
+      document.querySelectorAll('.option').forEach(opt=>{opt.addEventListener('click',()=>{const input=opt.querySelector('input'); if(input) input.checked=true})});
+    });
+  </script>
+
+
+  -->
+</body>
+</html>
